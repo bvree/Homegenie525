@@ -6,7 +6,7 @@ CMD ["/sbin/my_init"]
 ENV DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm"
 
-RUN apt-get update && apt-get install -y --no-install-recommends gdebi-core usbutils ca-certificates-mono && apt-get clean -y
+RUN apt-get update && apt-get install -y --no-install-recommends gdebi-core usbutils ca-certificates-mono wget && apt-get clean -y
 
 RUN wget --no-cookies -O /tmp/homegenie.deb https://github.com/genielabs/HomeGenie/releases/download/v1.1-beta.525/homegenie-beta_1.1.r525_all.deb
 
